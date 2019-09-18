@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 use App\Jobs\DemoQueue;
 class DemoController extends Controller
 {
@@ -19,4 +20,9 @@ class DemoController extends Controller
    			echo 'st';
    		}
    	}
+
+   	public function redisTest()
+    {
+        Redis::set('1','helloWorld');
+    }
 }

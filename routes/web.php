@@ -28,3 +28,5 @@ Route::get('push','DemoController@push',function(){
 Route::any('sql','DemoController@sql',function(){
 
 });
+
+Route::get('redisTest','DemoController@redisTest');

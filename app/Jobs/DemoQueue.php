@@ -15,7 +15,7 @@ class DemoQueue implements ShouldQueue
     protected $message;
     /**
      * Create a new job instance.
-     *
+     * @param $message
      * @return void
      */
     public function __construct($message)
@@ -33,4 +33,5 @@ class DemoQueue implements ShouldQueue
         //日志写入
         Log::Info($this->message);
     }
+
 }
